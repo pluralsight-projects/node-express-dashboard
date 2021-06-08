@@ -8,6 +8,6 @@ describe('index.ejs', () => {
     const logWindow = divPanel.children("#log-window")
     assert(logWindow.length > 0 && logWindow.hasClass("panel-body"), 'Have you added a `<div>` element with `panel-body` class and `log-window` id to `index.ejs`?')
     const text = logWindow.text()
-    assert(text === "No logs to show", 'Did you add the text `"No logs to show"` to the log window element"?')
+    expect(text).to.include("No logs")
   });
 })
